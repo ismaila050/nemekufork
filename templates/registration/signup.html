@@ -1,0 +1,34 @@
+<!--
+Templates/registration/signup pour register
+-->
+{% extends 'base.html' %}
+{% block title %}Sign up{% endblock %}
+{% block content %}
+  <h4>S'enregistrer</h4>
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+    <form method="post" action="/register">
+    {% csrf_token %}
+    <label for="username">Nom d'utilisateur</label>
+    <input type="text" id="username" name="username" placeholder="Entrer un nom d'utilisateur" required>
+    <br>
+    <label for="firstname">Nom</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Entrer votre Nom" required>
+    <br>
+    <label for="lastname">Prenom</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Entrer votre Prénom " required>
+    <br>
+    <label for="email">Email</label>
+    <input type="text" id="email"  name="email" placeholder="Entrer votre email" required>
+    <br>
+    <label for="password">Mot de Passe</label>
+    <input type="text" id="password"  name="password" placeholder="Entrer votre mot de passe " required>
+        <br>
+    <label for="password1">Re-mot de passe</label>
+    <input type="text" name="password1" id="password1" placeholder="Confirmer votre mot de passe" required>
+    <button type="submit">Valider</button>
+
+
+    </form>
+{% endblock %}

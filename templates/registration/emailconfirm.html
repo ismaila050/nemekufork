@@ -1,0 +1,6 @@
+{% autoescape off %}
+    Bienvenu sur Nemeku 
+    Bonjour {{ name }}
+    Veuillez confirmer votre adresse mail en cliquant sur ce lien suivant
+    lien: https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

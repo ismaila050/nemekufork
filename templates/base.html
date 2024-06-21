@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Django Auth{% endblock %}</title>
+    <link rel="stylesheet" href="{% block css %}{% static 'css/default.css' %}{% endblock %}">
+    <style>
+        .chat-message {
+            height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
