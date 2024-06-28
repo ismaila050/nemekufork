@@ -104,4 +104,4 @@ def logIn(request):
     return render(request, 'registration/login.html')
 def logout(request):
     messages.success(request,"Nemeku n'est rien sans vous ")
-    return redirect('home')
+    return render(request,'registration/login.html')
